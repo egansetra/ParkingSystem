@@ -161,10 +161,20 @@ namespace ParkingSystem
                 msg = "Format input not valid";
                 isValid = false;
             }
-            else if (newData.Length == 3 && newData[0].Split('-').Length != 3)
+            else if (newData.Length == 3)
             {
-                msg = "Registration Number not a valid. Please use this format T-000-XX";
-                isValid = false;
+                string[] regsNo = newData[0].Split('-');
+
+                if (regsNo.Length != 3)
+                {
+                    msg = "Registration Number not a valid. Please use this format T-000-XX";
+                    isValid = false;
+                }
+                else if (regsNo.Length == 3 && !int.TryParse(regsNo[1],out int value))
+                {
+                    msg = "Registration Number not a valid. Please use this format T-000-XX";
+                    isValid = false;
+                }
             }
 
             if (isValid)
