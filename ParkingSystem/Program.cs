@@ -7,7 +7,6 @@ namespace ParkingSystem
 {
     internal class Program
     {
-        public int LotCount { get; set; }
         static void Main(string[] args)
         {
             Menu();
