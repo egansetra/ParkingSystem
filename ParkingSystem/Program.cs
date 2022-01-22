@@ -282,7 +282,7 @@ namespace ParkingSystem
 
                 if (!string.IsNullOrWhiteSpace(currentData[2]) && currentData[2] == input)
                 {
-                    Console.Write(String.Format("{0}{1}", delim, currentData[0]));
+                    Console.Write(String.Format("{0}{1}", delim, currentData[1]));
                     delim = ",";
                     msg = string.Empty;
                 }
