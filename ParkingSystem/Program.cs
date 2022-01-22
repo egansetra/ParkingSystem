@@ -296,7 +296,7 @@ namespace ParkingSystem
         {
             Console.Clear();
             Console.WriteLine("1. Odd Plate");
-            Console.WriteLine("2. Even Plave");
+            Console.WriteLine("2. Even Plate");
             Console.Write("Option: ");
             string input = Console.ReadLine();
             List<string> csv = ReadCSV();
